@@ -24,7 +24,7 @@ def get_products(page=1):
 def fetch_all_products():
     page = 1
     all_products = []
-    max_pages = 2
+    max_pages = 1
 
     while page <= max_pages:
         products = get_products(page)

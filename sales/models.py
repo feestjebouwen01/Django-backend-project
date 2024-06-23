@@ -53,12 +53,12 @@ class Orders(models.Model):
 
     order_id = models.AutoField(primary_key=True)
     number = models.CharField(max_length=50, unique=True)
-    status = models.CharField(max_length=20, choices=STATUS_CHOICES)
+    status = models.CharField(max_length=50, choices=STATUS_CHOICES)
     channel = models.CharField(max_length=10, choices=CHANNEL_CHOICES)
     created_at = models.DateTimeField()
     price_incl = models.DecimalField(max_digits=10, decimal_places=2)
     price_excl = models.DecimalField(max_digits=10, decimal_places=2)
-    payment_status = models.CharField(max_length=20, choices=PAYMENT_CHOICES)
+    payment_status = models.CharField(max_length=30, choices=PAYMENT_CHOICES)
     firstname = models.CharField(max_length=50, blank= True, null=True)
     lastname = models.CharField(max_length=50, blank= True, null=True)
 

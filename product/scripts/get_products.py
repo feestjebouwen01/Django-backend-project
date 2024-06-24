@@ -24,7 +24,7 @@ def get_products(page=1):
 def fetch_all_products():
     page = 1
     all_products = []
-    max_pages = 1
+    max_pages = 7
 
     while page <= max_pages:
         products = get_products(page)
@@ -48,7 +48,7 @@ def fetch_all_products():
     return all_products
 
 class Command(BaseCommand):
-    help = 'Fetch and store Lightspeed orders'
+    help = 'Fetch and store Lightspeed products'
 
     def handle(self, *args, **options):
         products = fetch_all_products()

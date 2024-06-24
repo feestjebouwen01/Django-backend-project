@@ -83,6 +83,7 @@ class Orders(models.Model):
     customer = models.ForeignKey('customer.Customer', on_delete=models.CASCADE, related_name='orders')
 
     #custom Object Manager
+    objects = models.Manager()
     webshopObjects = WebshopObjects()
     apiObjects = ApiObjects()
 
